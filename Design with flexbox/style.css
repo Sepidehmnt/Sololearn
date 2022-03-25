@@ -9,8 +9,9 @@
   -webkit-box-sizing: border-box;
 }
 :root {
-  background-color: #f8efba;
-  primary-color: #fd7272;
+  --background-color: #d980fa;
+  --primary-color: #f7f1e3;
+  --secondary-color: #fda7df;
 }
 
 html {
@@ -19,13 +20,23 @@ html {
 }
 
 body {
-  background: var(background-color);
+  background: var(--background-color);
 }
 
 .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .single-box {
+  width: 300px;
+  height: auto;
+  background: var(--primary-color);
+  padding: 1.5rem;
+  margin: 1rem;
+  font-family: inherit;
 }
 
 .img-box {

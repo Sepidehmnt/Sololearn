@@ -31,6 +31,11 @@ body {
 }
 
 .single-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 300px;
   height: auto;
   background: var(--primary-color);
@@ -40,10 +45,35 @@ body {
 }
 
 .img-box {
+  position: relative;
+  border: 4px solid #d1ccc0;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
+  background-size: cover;
+  background-position: center;
 }
-
+.single-box:nth-child(1) .img-box {
+  background-image: url("./Img/webdesign.jpg");
+}
+.single-box:nth-child(2) .img-box {
+  background-image: url("./Img/graphicsdesign.jpg");
+}
+.single-box:nth-child(3) .img-box {
+  background-image: url("./Img/emailmarketing.jpg");
+}
+.single-box:hover {
+  background-color: var(--secondary-color);
+  transition: 0.3s;
+}
 .img-text {
+  line-height: 2rem;
 }
 
 .header-text {
+  font-size: 20px;
+}
+.img-text p {
+  font-size: 14px;
 }

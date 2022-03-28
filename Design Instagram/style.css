@@ -95,3 +95,33 @@ ul {
   font-size: 14px;
   font-weight: 500;
 }
+/* caption */
+.container .top-container .caption {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+}
+.container .top-container .caption .caption-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+  font-family: inherit;
+  font-size: 14px;
+}
+.container .top-container .caption .caption-edit-profile {
+  margin-top: 10px;
+}
+.container .top-container .caption .caption-edit-profile .edit-profile {
+  width: 90%;
+  padding: 6px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid #cfd4d6;
+}
+.container .top-container .caption .caption-edit-profile .add-user {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #cfd4d6;
+}

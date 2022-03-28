@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html {
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+  background: linear-gradient(141deg, #fff 0%, #f7f7f7 51%, #fff 75%);
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 400px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #ecf0f1;
+}
+.container .top-container {
+}
+.container .top-container .nav-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+.container .top-container .nav-head .left-nav {
+  /* margin-right: 8px; */
+}
+.container .top-container .nav-head .left-nav .fa-lock {
+  padding-right: 4px;
+  font-size: 14px;
+}
+.container .top-container .nav-head .left-nav .username {
+  padding-right: 2px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+}
+.container .top-container .nav-head .left-nav .fa-angle-down {
+}
+.container .top-container .nav-head .right-nav {
+  font-size: 20px;
+}
+.container .top-container .nav-head .right-nav .fa-plus-square {
+  padding-right: 20px;
+}
+.container .top-container .nav-head .right-nav .fa-bars {
+}

@@ -10,7 +10,8 @@ html {
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
-  background: linear-gradient(141deg, #fff 0%, #f7f7f7 51%, #fff 75%);
+  /* background: linear-gradient(141deg, #fff 0%, #f7f7f7 51%, #fff 75%); */
+  background: #ffffff;
   font-size: 16px;
 }
 a {
@@ -25,7 +26,8 @@ ul {
   width: 400px;
   height: 100vh;
   margin: 0 auto;
-  background-color: #ecf0f1;
+  /* background-color: #f1f2f6; */
+  background-color: white;
 }
 .container .top-container {
   display: flex;
@@ -56,7 +58,7 @@ ul {
 .container .top-container .nav-head .right-nav {
   font-size: 24px;
 }
-.container .top-container .nav-head .right-nav .fa-plus-square {
+.container .top-container .nav-head .right-nav .fa-plus-square-o {
   padding-right: 24px;
 }
 
@@ -144,7 +146,7 @@ ul {
   padding: 10px;
 }
 .container .top-container .highlight .single-highlight .img-box {
-  border: 2px solid #b2bec3;
+  border: 2px solid #cad3c8;
   width: 60px;
   height: 60px;
   margin-bottom: 4px;
@@ -155,6 +157,7 @@ ul {
 }
 .container .top-container .highlight .single-highlight span {
   text-align: center;
+  font-family: inherit;
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 20px;
@@ -171,26 +174,104 @@ ul {
 .container .top-container .highlight .single-highlight:nth-child(4) .img-box {
   background-image: url("./Img/img4.jpg");
 }
-/* .container .top-container .highlight .single-highlight:nth-child(5) .img-box {
-  background-image: url("./Img/img5.jpeg");
-  border-radius: 50% 0 0 50%;
-  position: absolute;
-  right: 0;
-  
-} */
-/* .container .top-container .highlight .single-highlight:nth-child(6) .img-box {
-  background-image: url("./Img/img6.jpg");
+
+/* page-posts */
+.container .bottom-container {
 }
-.container .top-container .highlight .single-highlight:nth-child(7) .img-box {
+.container .bottom-container .nav-middle {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  /* background-color: yellowgreen; */
+  padding: 14px 8px;
 }
-.container
-  .top-container
-  .highlight
-  .single-highlight:nth-child(7)
-  .img-box
-  .fa-plus {
-  font-size: 20px;
-} */
+.container .bottom-container .nav-middle .nav-bar {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.container .bottom-container .nav-middle .fa-play,
+.fa-user-circle {
+  color: #aaa69d;
+}
+.container .bottom-container .line {
+  border-bottom: 2px solid black;
+  width: 34%;
+}
+.container .bottom-container .page-posts {
+}
+.container .bottom-container .page-posts .post-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 100px;
+  gap: 1px;
+}
+.container .bottom-container .page-posts .post-container .post-box {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  border: 1px solid #ffffff;
+  -webkit-background-size: cover;
+}
+.container .bottom-container .page-posts .post-container .post-box2 {
+  width: 100%;
+  height: 20px;
+}
+.container .bottom-container .page-posts .post-container .post1 {
+  background-image: url("./Img/post1.jpg");
+}
+.container .bottom-container .page-posts .post-container .post2 {
+  background-image: url("./Img/post2.jpg");
+}
+.container .bottom-container .page-posts .post-container .post3 {
+  background-image: url("./Img/post3.jpg");
+}
+.container .bottom-container .page-posts .post-container .post4 {
+  background-image: url("./Img/post4.jpg");
+}
+.container .bottom-container .page-posts .post-container .post5 {
+  background-image: url("./Img/post5.jpg");
+}
+.container .bottom-container .page-posts .post-container .post6 {
+  background-image: url("./Img/post6.jpg");
+}
+.container .bottom-container .page-posts .post-container .post7 {
+  background-image: url("./Img/post7.jpg");
+}
+.container .bottom-container .page-posts .post-container .post8 {
+  background-image: url("./Img/post8.jpg");
+}
+.container .bottom-container .page-posts .post-container .post9 {
+  background-image: url("./Img/post9.jpg");
+}
+
+/* footer */
+
+.container .footer {
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 4px;
+}
+.container .footer .footer-bar {
+  font-size: 1.3rem;
+}
+.container .footer .home,
+.icon-profile {
+  width: 22px;
+  height: 22px;
+  background-size: cover;
+  background-position: center center;
+}
+.container .footer .icon-profile {
+  /* font-size: 1.5rem; */
+  border: 2px solid black;
+  border-radius: 50%;
+  background-image: url("./Img/profile.jpg");
+}
+.container .footer .home {
+  background-image: url("./Img/home.png");
+}

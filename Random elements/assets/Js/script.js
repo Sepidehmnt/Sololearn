@@ -1,12 +1,27 @@
 let redValue, greenValue, blueValue;
 
-setInterval(function () {
-  redValue = Math.floor(Math.random() * 255);
-  greenValue = Math.floor(Math.random() * 255);
-  blueValue = Math.floor(Math.random() * 255);
+function createBoxes() {
+  let body = document.getElementsByTagName("body")[0];
+  let canvas = document.createElement("canvas");
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+  let context = canvas.getContext("2d");
 
-  console.log("rgb(" + redValue + "," + greenValue + "," + blueValue + ");");
+  for (let i = 0; i < 100; i++) {
+    redValue = Math.floor(Math.random() * 256);
+    greenValue = Math.floor(Math.random() * 256);
+    blueValue = Math.floor(Math.random() * 256);
 
-  document.querySelector("div").style.backgroundColor =
-    "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
-}, 1000);
+    let bgColor = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
+    context.fillStyle = bgColor;
+
+    context.fillRect(
+      Math.random() * window.innerWidth,
+      Math.random() * window.innerHeight,
+      Math.random() * 60 + 40,
+      Math.random() * 60 + 40
+    );
+  }
+  body.appendChild(canvas);
+}
+window.onload = createBoxes;

@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* webkit is for google chrome */
+  -webkit-box-sizing: border-box;
+}
+:root {
+  --primary-color: rgb(120, 84, 247);
+  --secondary-color: rgb(148, 148, 148);
+  --dark-color: rgb(41, 40, 48);
+  --light-color: #f7f7f7;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: linear-gradient(141deg, #fff 0%, #f7f7f7 51%, #fff 75%);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.coloredBox {
+  width: 100px;
+  height: 200px;
+}

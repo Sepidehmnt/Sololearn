@@ -1,7 +1,8 @@
 window.onload = makeRandomBox();
 //Random boxes with random location,size and color
 function makeRandomBox() {
-  for (let i = 0; i < 10; i++) {
+  let numOfRect = Math.floor(Math.random() * 50) + 10;
+  for (let i = 0; i < numOfRect; i++) {
     let rectangle = document.createElement("div");
     rectangle.style.position = "absolute";
     //start: random x,y

@@ -7,11 +7,11 @@ window.onload = makeRandomBox();
 //Random boxes with random location,size and color
 function makeRandomBox() {
   //start: random x,y
-  rectangle.style.left = Math.floor(Math.random() * 200) + "px";
-  rectangle.style.top = Math.floor(Math.random() * 300) + "px";
+  rectangle.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+  rectangle.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
   //random width and height
-  rectangle.style.width = Math.floor(Math.random() * 200) + "px";
-  rectangle.style.height = Math.floor(Math.random() * 300) + "px";
+  rectangle.style.width = Math.floor(Math.random() * 70) + 30 + "px";
+  rectangle.style.height = Math.floor(Math.random() * 60) + 40 + "px";
   //random color
   rectangle.style.backgroundColor = getRandomColor();
 }

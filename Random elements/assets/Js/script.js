@@ -1,19 +1,19 @@
-let rectangle = document.createElement("div");
-rectangle.style.backgroundColor = "#f1c40f";
-rectangle.style.position = "absolute";
-document.body.appendChild(rectangle);
-
 window.onload = makeRandomBox();
 //Random boxes with random location,size and color
 function makeRandomBox() {
-  //start: random x,y
-  rectangle.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
-  rectangle.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
-  //random width and height
-  rectangle.style.width = Math.floor(Math.random() * 70) + 30 + "px";
-  rectangle.style.height = Math.floor(Math.random() * 60) + 40 + "px";
-  //random color
-  rectangle.style.backgroundColor = getRandomColor();
+  for (let i = 0; i < 10; i++) {
+    let rectangle = document.createElement("div");
+    rectangle.style.position = "absolute";
+    //start: random x,y
+    rectangle.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+    rectangle.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+    //random width and height
+    rectangle.style.width = Math.floor(Math.random() * 70) + 30 + "px";
+    rectangle.style.height = Math.floor(Math.random() * 60) + 40 + "px";
+    //random color
+    rectangle.style.backgroundColor = getRandomColor();
+    document.body.appendChild(rectangle);
+  }
 }
 
 //function for getting random color

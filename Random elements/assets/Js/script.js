@@ -26,3 +26,20 @@ function getRandomColor() {
 
   return bgColor;
 }
+// end of random boxes with some random features
+
+//move each random box with hover on it
+let rectangles = document.getElementsByTagName("div");
+// for...of loop can iterate over the values, each one of div in body
+for (let rectangle of rectangles) {
+  rectangle.addEventListener("mouseover", moveRectangle);
+}
+
+//function for move random each one of rectangles
+function moveRectangle(event) {
+  let xPos = Math.floor(Math.random() * innerWidth);
+  let yPos = Math.floor(Math.random() * innerHeight);
+  let element = event.target;
+  element.style.setProperty("left", xPos + "px");
+  element.style.setProperty("top", yPos + "px");
+}

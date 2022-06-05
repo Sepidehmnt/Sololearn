@@ -1,3 +1,5 @@
+const maxWidth = 150;
+const maxHigh = 100;
 window.onload = getRandomElement();
 
 function getRandomElement() {
@@ -13,11 +15,11 @@ function makeRectangle() {
   console.log(rectangle);
   rectangle.style.position = "absolute";
 
-  rectangle.style.left = generateRand(window.innerWidth - 150) + "px";
-
+  rectangle.style.left = generateRand(window.innerWidth - maxWidth) + "px";
+  console.log(window.innerHeight);
   console.log(rectangle.style.left);
 
-  rectangle.style.top = generateRand(window.innerHeight - 150) + "px";
+  rectangle.style.top = generateRand(window.innerHeight - maxHigh) + "px";
 
   rectangle.style.width = generateRand(70, 30) + "px";
   rectangle.style.height = generateRand(60, 40) + "px";
@@ -41,8 +43,11 @@ $("div").on("mouseover", moveRectangle);
 
 //fuction for moving each random box to a random location
 function moveRectangle() {
-  $(this).animate({
-    left: generateRand((window.innerWidth - 150) / 1.5),
-    top: generateRand((window.innerWidth - 150) / 1.5),
-  });
+  $(this).animate(
+    {
+      left: generateRand(window.innerWidth - maxWidth),
+      top: generateRand(window.innerHeight - maxHigh),
+    },
+    1000
+  );
 }

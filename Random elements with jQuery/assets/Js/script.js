@@ -40,10 +40,9 @@ function getRandomColor() {
 $("div").on("mouseover", moveRectangle);
 
 //fuction for moving each random box to a random location
-function moveRectangle(event) {
-  let xPos = generateRand((window.innerWidth - 150) / 1.5);
-  let yPos = generateRand((window.innerHeight - 150) / 1.5);
-  let element = event.target;
-  element.style.setProperty("left", xPos + "px");
-  element.style.setProperty("top", yPos + "px");
+function moveRectangle() {
+  $(this).animate({
+    left: generateRand((window.innerWidth - 150) / 1.5),
+    top: generateRand((window.innerWidth - 150) / 1.5),
+  });
 }

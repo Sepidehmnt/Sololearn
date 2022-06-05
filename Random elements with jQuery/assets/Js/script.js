@@ -10,10 +10,14 @@ function generateRand(multiplier, operand = 0) {
 }
 function makeRectangle() {
   let rectangle = document.createElement("div");
+  console.log(rectangle);
   rectangle.style.position = "absolute";
 
-  rectangle.style.left = generateRand(window.innerWidth) + "px";
-  rectangle.style.top = generateRand(window.innerHeight) + "px";
+  rectangle.style.left = generateRand(window.innerWidth - 150) + "px";
+
+  console.log(rectangle.style.left);
+
+  rectangle.style.top = generateRand(window.innerHeight - 150) + "px";
 
   rectangle.style.width = generateRand(70, 30) + "px";
   rectangle.style.height = generateRand(60, 40) + "px";
@@ -24,27 +28,21 @@ function makeRectangle() {
 
 //function for getting random color
 function getRandomColor() {
-  let redValue = generateRand(255);
-  console.log(redValue);
-
-  let greenValue = generateRand(255);
-  let blueValue = generateRand(255);
+  let colorRange = 256;
+  let redValue = generateRand(colorRange);
+  let greenValue = generateRand(colorRange);
+  let blueValue = generateRand(colorRange);
   let bgColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
   return bgColor;
 }
 
 //Move each box when hover on it to random location
-let rectangles = document.getElementsByTagName("div");
-
-//foor...of loop can iterate over the values. Each of div in body
-for (let rectangle of rectangles) {
-  rectangle.addEventListener("mouseover", moveRectangle);
-}
+$("div").on("mouseover", moveRectangle);
 
 //fuction for moving each random box to a random location
 function moveRectangle(event) {
-  let xPos = generateRand(innerWidth);
-  let yPos = generateRand(innerHeight);
+  let xPos = generateRand((window.innerWidth - 150) / 1.5);
+  let yPos = generateRand((window.innerHeight - 150) / 1.5);
   let element = event.target;
   element.style.setProperty("left", xPos + "px");
   element.style.setProperty("top", yPos + "px");

@@ -1,4 +1,4 @@
-const maxWidth = 150;
+const maxWidth = 100;
 const maxHigh = 100;
 window.onload = getRandomElement();
 
@@ -16,12 +16,13 @@ function makeRectangle() {
   rectangle.style.position = "absolute";
 
   rectangle.style.left = generateRand(window.innerWidth - maxWidth) + "px";
-  console.log(window.innerHeight);
+  console.log("innerHeight::", window.innerHeight);
   console.log(rectangle.style.left);
 
   rectangle.style.top = generateRand(window.innerHeight - maxHigh) + "px";
 
   rectangle.style.width = generateRand(70, 30) + "px";
+  console.log("width::", rectangle.style.width);
   rectangle.style.height = generateRand(60, 40) + "px";
 
   rectangle.style.backgroundColor = getRandomColor();

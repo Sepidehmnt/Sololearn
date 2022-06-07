@@ -1,37 +1,42 @@
 const maxWidth = 100;
 const maxHigh = 100;
-window.onload = getRandomElement();
+const colorRange = 256;
 
+//The load event is sent to an element when it and all sub-elements have been completely loaded
+$(window).on("load", getRandomElement());
+
+//This function produces some random elements according to for loop and its size
 function getRandomElement() {
   let numOfRect = generateRand(50, 10);
   for (let i = 0; i < numOfRect; i++) makeRectangle();
 }
-//random size
+
+//function for producing random numbers
 function generateRand(multiplier, operand = 0) {
   return Math.floor(Math.random() * multiplier) + operand;
 }
+
+//This function creates some random rectangles with random size
 function makeRectangle() {
-  let rectangle = document.createElement("div");
-  console.log(rectangle);
-  rectangle.style.position = "absolute";
+  let rectangle = $("<div>");
 
-  rectangle.style.left = generateRand(window.innerWidth - maxWidth) + "px";
-  console.log("innerHeight::", window.innerHeight);
-  console.log(rectangle.style.left);
+  $(rectangle).css({
+    left: generateRand(window.innerWidth - maxWidth) + "px",
+    top: generateRand(window.innerHeight - maxHigh) + "px",
+    position: "absolute",
+  });
 
-  rectangle.style.top = generateRand(window.innerHeight - maxHigh) + "px";
+  $(rectangle).width(generateRand(70, 30) + "px");
 
-  rectangle.style.width = generateRand(70, 30) + "px";
-  console.log("width::", rectangle.style.width);
-  rectangle.style.height = generateRand(60, 40) + "px";
+  $(rectangle).height(generateRand(60, 40) + "px");
 
-  rectangle.style.backgroundColor = getRandomColor();
-  document.body.appendChild(rectangle);
+  $(rectangle).css("background-color", getRandomColor());
+
+  $("body").append(rectangle);
 }
 
-//function for getting random color
+//This function produces random color
 function getRandomColor() {
-  let colorRange = 256;
   let redValue = generateRand(colorRange);
   let greenValue = generateRand(colorRange);
   let blueValue = generateRand(colorRange);
@@ -49,6 +54,6 @@ function moveRectangle() {
       left: generateRand(window.innerWidth - maxWidth),
       top: generateRand(window.innerHeight - maxHigh),
     },
-    1000
+    600
   );
 }
